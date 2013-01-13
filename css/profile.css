@@ -1,3 +1,11 @@
+.page-header
+{
+background-color:#A0DA49;
+padding:20px;
+border-radius:2em;
+ box-shadow: 0px 0px 5px #888888;
+}
+
 @import url(//fonts.googleapis.com/css?family=Telex);
 row2
 {
@@ -5073,6 +5081,7 @@ a.badge:hover {
 .carousel-caption p {
   color: #ffffff;
   line-height: 20px;
+
 }
 .carousel-caption h4 {
   margin: 0 0 5px;

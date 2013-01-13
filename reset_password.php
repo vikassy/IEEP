@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>IEEP | Contact Us</title>
+<title>IEEP | Forgot Password</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -35,17 +35,26 @@
 <section id="typography">
   <div class="page-header">
 <br /><br /><br />   
- <h3>Contact Us</h3>
+ <h3>Interactive Environmental Education Portal</h3>
   </div>
+
 
 
   <div class="row">
 
     
-    <div class="span12">
+    <div style="text-align:center" class="span12">
+      
+  <div class="row">
+    <div class="span6 offset3">
+          <form class="well form-search" method="post" action="send_email.php" name="login">
+          <legend>Forgot Password</legend>
+          <input type="email" class="input-small span4" placeholder="Email-ID" name="email">&nbsp;&nbsp;
+          <button type="submit" class="btn">Send Email</button>
+        </form>
 
-      <p> <b>Contact us at: ieep.nitk@gmail.com</b></p>
-  <br />
+      </div>
+  </div>
   
     </div>
 
@@ -77,8 +86,8 @@
      
      </div></div></div>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       
+  
+       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
    
 <br><br><br><br>
 
