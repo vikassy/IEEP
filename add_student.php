@@ -4,31 +4,18 @@ include "db_connect.php";
 include "functions.php";
 ?>
 
-
-
-
 <html>
 <head>
     <title>
-        Index Page
+        Add Student Page
     </title>
-    <script src="jquery.js"></script>
-    <script>
-        $('a.add_student').live ( 'click' , function() {
-        $('form#add_student').toggle();
-});
-</script>
+    
 </head>
 <body>
-    <h1>hi <?php echo $_SESSION['user_name']; ?>, welcome to main page</h1>
-    <a href="logout.php">Logout</a>
-    <?php
-        if ( $_SESSION['type'] == 1 )
-        {
-    ?>
+    <h1>hi <?php echo $_SESSION['user_name']; ?>,add student</h1>
+    
     <div id="teacher_activities">
         <div>
-        <a href="#" class="add_student">Add a student.</a>
         <form name = "register" action ='teacher\add_student.php' method = 'post' id="add_student">
         <table>
             <tr><td>Student Name*:</td><td><input type="text"  name = 'user_name' id='full_name'/></td></tr>
@@ -301,6 +288,5 @@ include "functions.php";
 
         <a href="#">Create a task.</a>
     </div>
-    <?php } ?>
 </body>
 </html>
