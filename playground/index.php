@@ -21,18 +21,18 @@
 </div>
   <div class="container" id="header-container">
     <div class="row" id="header">
-      <div class="onecol"  onClick="loadUrl('courses/course-101/course-101-1.html'')"> Dashboard </div>
+      <div class="onecol"  onClick="loadUrl('courses/course-101/course-101-1.html'')" style="cursor:pointer;"> Dashboard </div>
        <div class="onecol" > </div>
       <div class="eightcol">
         <h1>Playground</h1>
       </div>
-      <div class="twocol  last">Environment 101</div>
+      <div class="twocol  last">  <div id="user-name">NewUser</div></div>
     </div>
   </div>
   <br />
   <div class="container">
     <div class="row" id="body-head">
-      <div class="threecol"> </div>
+      <div class="threecol"> <div id="course-name">Environment 101</div> </div>
       <div class="sixcol">
       <!-- Dynamically generated -->
       	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-2.php',this)"> </div>
@@ -64,8 +64,8 @@
     </div>
     <div class="row" id="effect-box">
       <div class="twelvecol">
-        <div class="level-marker"> </div>
-        <div class="level-marker"> </div>
+        <div class="level-marker" onClick="changeWeather('day');">Day</div>
+        <div class="level-marker" onClick="changeWeather('night');">Night</div>
       </div>
     </div>
   </div>
