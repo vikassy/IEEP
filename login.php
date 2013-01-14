@@ -1,5 +1,4 @@
-<?php include("include/header.php"); ?>
-   
+<?php include("include/header.php"); ?> 
  <h3>Interactive Environmental Education Portal</h3>
   </div>
 
@@ -23,8 +22,18 @@
               }
               elseif(isset($_REQUEST['xyz']))
               {
-                echo "<div class='alert alerrt-success'> Email ID not found, Please <a href='signup.html'>Sign up</a> </div>";
+                echo "<div class='alert alert-error'> Email ID not found, Please <a href='signup.html'>Sign up</a> </div>";
               }
+              elseif(isset($_REQUEST['success']))
+              {
+                echo "<div class='alert alert-success'>You have successfully been registered for The Green Playground, please check your mail (if entered)
+                        for your account details and Login Here</div>";
+              }
+              elseif(isset($_REQUEST['change']))
+              {
+                echo "<div class='alert alert-success'>You have successfully changed your password. Login Here</div>";
+              }
+    
          ?>
         <form class="well form-search" method="post" action="form_action.php" name="login">
           <legend>Login</legend>
@@ -48,44 +57,7 @@
 </section>
 
 
-
-<div class="navbar navbar-fixed-bottom">
-   <div class="navbar-inner" style="text-align:center">
-     <div class="container">
-     <div class="nav-collapse" id="main-menu">
-        <div class="btn-group">
-  <button class="btn" onclick="window.open ('about.html','_self',false)">About</button>
-  <button class="btn" onclick="window.open ('approach.html','_self',false)">Approach</button>
-  <button class="btn" onclick="window.open ('research.html','_self',false)">Research</button>
-  <button class="btn" onclick="window.open ('team.html','_self',false)">Team</button>
-  <button class="btn" onclick="window.open ('contact.html','_self',false)">Contact Us</button>
-  <button class="btn" onclick="window.open ('faq.html','_self',false)">FAQs</button>
-
-
-</div>
-        
-       </div>
-     
-     </div></div></div>
-
-  
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-   
-<br><br><br><br>
-
-
-    </div><!-- /container -->
-
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    
-
-
-  
+<?php include("include/footer.php"); ?>
 
 </body>
 </html>
