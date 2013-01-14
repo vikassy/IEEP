@@ -6,7 +6,8 @@
         <title>amCharts examples</title>
         <link rel="stylesheet" href="https://sites.google.com/site/tushardobhal/data-viz/style.css?attredirects=0&d=1" type="text/css">
         <script src="amcharts.js" type="text/javascript"></script>        
-        <link type="text/css" rel="stylesheet" href="css/common.css"  />
+        <link type="text/css" rel="stylesheet" href="../css/common.css"  /><link type="text/css" rel="stylesheet" href="../css/buttons.css"  />
+        <link type="text/css" rel="stylesheet" href="css/buttons.css"  />
         <script type="text/javascript">
             var chart;
 
@@ -354,6 +355,31 @@
     
     <body>
         <div id="chartdiv" style="width: 100%; height: 400px;"></div>
+        
+        <form class="questions" action="submit.php" method="post">        
+        <h2>Q1</h2><br>
+        Is such a huge rise in population a :<br>       
+		<input type="radio" name="q1" value="good">Good Thing<br>
+		<input type="radio" name="q1" value="bad">Bad Thing<br>
+
+        
+        <h2>Q2</h2><br>
+        Is such a huge rise in population a :<br>       
+		<input type="radio" name="q3" value="good">Good Thing<br>
+		<input type="radio" name="q3" value="bad">Bad Thing<br>
+		
+        <h2>Q3</h2><br>
+        Is such a huge rise in population a :<br>       
+		<input type="radio" name="q2" value="good">Good Thing<br>
+		<input type="radio" name="q2" value="bad">Bad Thing
+        
+        <br>
+
+       <div style="text-align:center;"> <input type="submit" class="button primary" value="Done!"/> </div>
+       
+       
+        </form>
+        
     </body>
 
 </html>

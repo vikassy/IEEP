@@ -44,7 +44,7 @@
       	<div class="level-marker" onClick="loadUrl('course-101/course-101-8.html',this)"> </div>
         <div class="level-marker" onClick="loadUrl('course-101/course-101-9.html',this)"> </div>
           <div class="level-marker" onClick="loadUrl('course-101/course-101-10.html',this)"> </div>
-       
+       <!-- Dynamically generated -->
       </div>
       <div class="threecol last"> </div>
     </div>

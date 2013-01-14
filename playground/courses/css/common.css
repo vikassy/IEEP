@@ -44,5 +44,15 @@ h2
 }
 body
 {
-	font-family:Tahoma, Geneva, sans-serif;
+	font-family: 'Lato', sans-serif;}
+
+.questions
+{
+		font-family: 'Lato', sans-serif;
+		padding:15px;
+		margin:25px;
+		border-top:solid thin #999;
+		font-size:14px;
+		font-weight:lighter;
 }
+
