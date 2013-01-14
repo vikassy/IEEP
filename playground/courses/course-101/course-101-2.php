@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>amCharts examples</title>
         <link rel="stylesheet" href="https://sites.google.com/site/tushardobhal/data-viz/style.css?attredirects=0&d=1" type="text/css">
-        <script src="amcharts.js" type="text/javascript"></script>        
+        <script src="../js/amcharts.js" type="text/javascript"></script>        
         <link type="text/css" rel="stylesheet" href="../css/common.css"  /><link type="text/css" rel="stylesheet" href="../css/buttons.css"  />
         <link type="text/css" rel="stylesheet" href="css/buttons.css"  />
         <script type="text/javascript">
