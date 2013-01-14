@@ -21,7 +21,7 @@
 </div>
   <div class="container" id="header-container">
     <div class="row" id="header">
-      <div class="onecol"  onClick="loadUrl('course-101/course-101-1.html'')"> Dashboard </div>
+      <div class="onecol"  onClick="loadUrl('courses/course-101/course-101-1.html'')"> Dashboard </div>
        <div class="onecol" > </div>
       <div class="eightcol">
         <h1>Playground</h1>
@@ -35,15 +35,15 @@
       <div class="threecol"> </div>
       <div class="sixcol">
       <!-- Dynamically generated -->
-      	<div class="level-marker" onClick="loadUrl('course-101/course-101-2.html',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('course-101/course-101-3.html',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('course-101/course-101-4.html',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('course-101/course-101-5.html',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('course-101/course-101-6.html',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('course-101/course-101-7.html',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('course-101/course-101-8.html',this)"> </div>
-        <div class="level-marker" onClick="loadUrl('course-101/course-101-9.html',this)"> </div>
-          <div class="level-marker" onClick="loadUrl('course-101/course-101-10.html',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-2.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-3.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-4.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-5.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-6.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-7.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-8.php',this)"> </div>
+        <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-9.php',this)"> </div>
+          <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-10.php',this)"> </div>
        <!-- Dynamically generated -->
       </div>
       <div class="threecol last"> </div>
@@ -52,7 +52,7 @@
   <div class="row" >
     <div class="onecol"> </div>
     <div class="tencol" id="body-content">
-      <iframe onload="calcHeight()" src="course-101/course-101-1.html" id="main-frame" height="100%" ></iframe>
+      <iframe onload="calcHeight()" src="courses/course-101/course-101-1.php" id="main-frame" height="100%" ></iframe>
       <div id="loading">Loading.</div>
     </div>
     <div class="onecol last"> </div>
