@@ -108,3 +108,31 @@ $("#main-frame").getNiceScroll().resize();
 
 }
 
+function changeWeather(w)
+{
+	
+if(w=="day")
+{
+	
+	$('#background-effects').css({"background-image" : "url('./img/sunny.jpg')"});
+	$('#background-effects').css('background-position','center');
+	$('#background-effects').css('background-size','cover');
+	
+	$('#weather-effects').css({"background-image" : "url('./img/clear.png	')"});
+	$('#weather-effects').css('background-position','center');
+	$('#weather-effects').css('background-size','cover');
+		
+}
+else
+{
+	
+    $('#background-effects').css({"background-image" : "url('./img/rain.jpg')"});
+	$('#background-effects').css('background-position','center');
+	$('#background-effects').css('background-size','cover');
+	$('div').css('color','#FFF');
+	
+	$('#weather-effects').css({"background-image" : "url('./img/clear-night.png	')"});
+	$('#weather-effects').css('background-position','center');
+	$('#weather-effects').css('background-size','cover');
+}
+}

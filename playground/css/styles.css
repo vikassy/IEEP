@@ -28,6 +28,17 @@ body {
 	padding-bottom:3px;
 }
 
+#course-name
+{
+width:auto;
+padding:5px;
+background-color:rgba(0,0,0,0.2);
+border:thin solid rgba(255,255,255,0.6);
+font-family:"Raleway",sans-serif;
+font-size:24px;	
+box-shadow:0px 0px 2px rgba(0,0,0,0.5);
+}
+
 #header h1
 {
 	font-family: 'Raleway', sans-serif;
@@ -72,10 +83,12 @@ body {
 }
 .level-marker {
 	display: inline-table;
-	height: 50px;
-	width: 50px;
+	height: 44px;
+	width: 44px;
 	background-image: url(../img/level.png);
 	opacity:0.7;
+	padding:3px;
+	cursor:pointer;
 }
 
 .level-marker:hover{
