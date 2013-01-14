@@ -7,6 +7,7 @@ h5
 {
 display:inline;
 }
+
  a
  {
   cursor:pointer; 
@@ -3653,7 +3654,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: #ffffff;
+  color: green;
   text-shadow: 0 1px 0 #54b4eb;
 }
 .navbar .brand:hover {
