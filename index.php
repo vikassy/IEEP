@@ -19,7 +19,7 @@
   natural wonders of this earth to learn more about the world around you.</p>
   <br />
   So what are you waiting for?&nbsp; 
-  <a class="btn btn-primary btn-large" onclick="window.open ('signup.html','_self',false)">Signup</a>&nbsp;now!!
+  <a class="btn btn-primary btn-large" onclick="window.open ('signup.php','_self',false)">Signup</a>&nbsp;now!!
 
     
     </div>

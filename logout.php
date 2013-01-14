@@ -1,7 +1,7 @@
 <?php
-session_start();
-session_destroy();
-header("location:login.php");
-
-
+include("class.login.php");
+$log = new logmein();
+$log->encrypt = true; //set encryption
+$log->logout();
+header("location: index.php")
 ?>

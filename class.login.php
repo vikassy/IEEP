@@ -6,15 +6,13 @@ session_start();
 class logmein {
     //database setup
        //MAKE SURE TO FILL IN DATABASE INFO
-    /*var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
-    var $database_logon = 'IEEP';       //Database NAME
-    var $username_logon = 'IEEP';       //Database USERNAME
-    var $password_logon = 'Random123!@#';       //Database PASSWORD
-    */
+    
+//---------------------Coomment this file while deploying ---------------------------//
     var $hostname_logon = 'localhost';      //Database server LOCATION
-    var $database_logon = 'ieep';       //Database NAME
+    var $database_logon = 'IEEP';       //Database NAME
     var $username_logon = 'root';       //Database USERNAME
-    var $password_logon = '123456';       //Database PASSWORD
+    var $password_logon = 'root';       //Database PASSWORD
+//---------------------Coomment this file while deploying -----------------------/
     //table fields
     var $email_column = 'email';
     var $user_table = 'student';          //Users table name
@@ -24,7 +22,9 @@ class logmein {
     
     //encryption
     var $encrypt = false;       //set to true to use md5 encryption for the password
- 
+    
+    var $user = array(); 
+
     //connect to database
     function dbconnect(){
         $connections = mysql_connect($this->hostname_logon, $this->username_logon, $this->password_logon) or die ('Unabale to connect to the database');
@@ -106,10 +106,19 @@ class logmein {
             $this->user_column = $user_column;
         }
         if($this->user_table == ""){
-            $this->user_table = $user_table;
+          $this->user_table = $user_table;
         }
         //exectue query
         $result = $this->qry("SELECT * FROM ".$this->user_table." WHERE ".$this->pass_column." = '?';" , $logincode);
+        $details=mysql_fetch_row($result);
+        $total_column=mysql_num_fields($result);
+        $i=0;
+        while($i < $total_column)
+        {
+          $columns_key = mysql_field_name($result,$i);
+          $this->user[$columns_key] = $details[$i];
+            $i++;
+        }
         $rownum = mysql_num_rows($result);
         //return true if logged in and false if not
         if($row != "Error"){

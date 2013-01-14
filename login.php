@@ -1,4 +1,5 @@
 <?php include("include/header.php"); ?> 
+  <?php include('include/unauthorize.php'); ?>   
  <h3>Interactive Environmental Education Portal</h3>
   </div>
 
@@ -33,7 +34,14 @@
               {
                 echo "<div class='alert alert-success'>You have successfully changed your password. Login Here</div>";
               }
-    
+              elseif(isset($_REQUEST['invalid']))
+              {
+                echo "<div class='alert alert-error'> Invalid Email ID, Mail not sent </div>";
+              }
+              elseif(isset($_REQUEST['unauthorized']))
+              {
+                echo "<div class='alert alert-error'>Please Sign in</div>";
+              }
          ?>
         <form class="well form-search" method="post" action="form_action.php" name="login">
           <legend>Login</legend>

@@ -1,14 +1,20 @@
 <?php
    
+    include 'include/unauthorize.php';
     include("class.login.php");
 $log = new logmein();
 $log->encrypt = true; //set encryption
     //$a =  $log->passwordreset($_POST['email'],"logon","password","email");
     if($_POST['type']=='email')
     {
-        if ($log->passwordreset($_POST['email'],"student","password","email")== 1)
+        $result=$log->passwordreset($_POST['email'],"student","password","email");
+        if ($result== 1)
         {
             header("location: login.php?retry=1");
+        }
+        elseif ($result== 2)
+        {
+            header("location: login.php?invalid=1");
         }
         else
         {
@@ -36,7 +42,7 @@ $log->encrypt = true; //set encryption
           <?php
               $username=$_POST['username'];
               //echo $username;
-              $result=$log->qry("SELECT * FROM student WHERE name='?'",$username);
+              $result=$log->qry("SELECT * FROM student WHERE username='?'",$username);
               //echo $result;
               $row=mysql_fetch_assoc($result);
               if(!$row)
@@ -54,7 +60,7 @@ $log->encrypt = true; //set encryption
           ?>
           <input type="text" class="input-small span4" placeholder="Answer 1" name="a1">&nbsp;&nbsp;
           <br/><br/>
-          <legend>Security Question 2</legend>
+          <legend>Security Question 2:</legend>
           <?php echo "<h4>".$q2."</h4>";  ?>
           <input type="text" class="input-small span3" placeholder="Answer 2" name="a2">&nbsp;&nbsp;
           <br/><br/><button type="submit" class="btn">Answer Questions</button>

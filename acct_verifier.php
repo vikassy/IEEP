@@ -1,13 +1,14 @@
 <?php
     
     include("class.login.php");
+    include("include/unauthorize.php");
     $log=new logmein();
     $username=$_POST['username'];
     $a1=$_POST['a1'];
     $a1=strtolower($a1);
     $a2=$_POST['a2'];
     $a2=strtolower($a2);
-    $result=$log->qry("SELECT * FROM student WHERE name='?'",$username);
+    $result=$log->qry("SELECT * FROM student WHERE username='?'",$username);
     $row=mysql_fetch_assoc($result);
     if($a1==$row['a1'] && $a2==$row['a2'])
     {

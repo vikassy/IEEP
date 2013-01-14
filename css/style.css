@@ -1,3 +1,4 @@
+/* DO NOT CHANGE ANYTHING HERE !!! */
 @import url(//fonts.googleapis.com/css?family=Telex);
 row2
 {
@@ -3654,7 +3655,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: green;
+  color: #ffffff;
   text-shadow: 0 1px 0 #54b4eb;
 }
 .navbar .brand:hover {

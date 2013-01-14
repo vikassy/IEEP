@@ -1,4 +1,5 @@
 <?php include("include/header.php"); ?>   
+<?php include 'include/unauthorize.php'; ?> 
  <h3>Interactive Environmental Education Portal</h3>
   </div>
 <?php
@@ -494,8 +495,8 @@
 	<!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jQuery-1.js"></script>
 	<script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 	<script src="js/prettify.js"></script>
+	<!-- // <script type="js/tab.js"></script> -->
     
     <script>
             $(function() {
