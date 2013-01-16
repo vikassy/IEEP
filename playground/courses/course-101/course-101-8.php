@@ -47,7 +47,7 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
       var options = {
         region: 'world',
         displayMode: 'regions',
-		
+		backgroundColor:'#646464',
         colorAxis: {colors: ['red', 'white', 'green']}
       };
 
@@ -59,7 +59,10 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
     google.setOnLoadCallback(drawVisualization);
     </script>
   </head>
-  <body style="font-family: Arial;border: 0 none;">
-    <div id="visualization" style="height: 800px; width: 800px;margin:auto;"></div>
+  <body style="font-family: Arial;border: 0 none; ">
+    <div id="visualization" style="height: 800px; width: 800px;margin:auto;"></div><br />
+<br />
+ 
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-9.php'"/> </div>
   </body>
 </html>

@@ -26,7 +26,7 @@
       <div class="eightcol">
         <h1>Playground</h1>
       </div>
-      <div class="twocol  last">  <div id="user-name">NewUser</div></div>
+      <div class="twocol  last">  <div id="user-name">Demo User</div></div>
     </div>
   </div>
   <br />
@@ -35,16 +35,16 @@
       <div class="threecol"> <div id="course-name">Environment 101</div> </div>
       <div class="sixcol">
       <!-- Dynamically generated -->
-        <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-1.php',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-2.php',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-3.php',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-4.php',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-5.php',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-6.php',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-7.php',this)"> </div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-8.php',this)"> </div>
-        <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-9.php',this)"> </div>
-          <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-10.php',this)"> </div>
+        <div class="level-marker level-marker-on" onClick="loadUrl('courses/course-101/course-101-1.php',this)">0</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-2.php',this)">1</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-3.php',this)">2</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-4.php',this)">3</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-5.php',this)">4</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-6.php',this)">5</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-7.php',this)">6</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-8.php',this)">7</div>
+        <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-9.php',this)">8</div>
+          <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-10.php',this)">9</div>
        <!-- Dynamically generated -->
       </div>
       <div class="threecol last"> </div>

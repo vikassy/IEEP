@@ -25,6 +25,9 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
   </h1>
   <p>
   	is defined as blah blah blah.
-  </p>
+  </p><br />
+<br />
+ 
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-11.php'"/> </div>
   </body>
 </html>

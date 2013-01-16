@@ -1,3 +1,5 @@
+
+
 <!--
 You are free to copy and use this sample in accordance with the terms of the
 Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
@@ -12,16 +14,16 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
     </title>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['geochart']});
+      google.load('visualization', '1', {packages: ['geomap']});
     </script>
-    <link type="text/css" rel="stylesheet" href="../css/common.css"  /><link type="text/css" rel="stylesheet" href="../css/buttons.css"  />
+      <link type="text/css" rel="stylesheet" href="../css/common.css"  /><link type="text/css" rel="stylesheet" href="../css/buttons.css"  />
     <script type="text/javascript">
     var visualization;
 
     function drawVisualization() {
       // To see the data that this visualization uses, browse to
       // http://spreadsheets.google.com/ccc?key=pCQbetd-CptGXxxQIG7VFIQ
-      var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0Ajf0Qu3iKU02dF9SdVBZUHgwalVrZGpNX1JqQnFNZ3c#gid=0');
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0Ajf0Qu3iKU02dC1keEwyM0l3X1gwLThUOHRlQl9US0E#gid=0');
     
       // Send the query with a callback function.
       query.send(handleQueryResponse);
@@ -35,24 +37,24 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
     
       var data = response.getDataTable();
       var options = {
-        region: 'world',
+        region: 'IN',
         displayMode: 'markers',
-		backgroundColor:'#646464',
-		tooltip:{trigger:'focus'},
-        colorAxis: {colors: ['#FFAA00', '#FF0000']}
+		magnifyingGlass:{enable: true, zoomFactor: 5.0},
+        colorAxis: {colors: ['red', 'green']}
       };
 
-	  visualization = new google.visualization.GeoChart(document.getElementById('visualization'));
+	  visualization = new google.visualization.GeoMap(document.getElementById('visualization'));
       visualization.draw(data, options);
     }
     
 
     google.setOnLoadCallback(drawVisualization);
     </script>
-     <link type="text/css" rel="stylesheet" href="../css/common.css"  /><link type="text/css" rel="stylesheet" href="../css/buttons.css"  />
   </head>
   <body style="font-family: Arial;border: 0 none;">
-    <div id="visualization" style="height: 800px; width: 800px; margin:auto;"></div>
-       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-4.php'"/> </div>
+    <div id="visualization" style="height: 700px; width:400px; margin:auto;"></div><br />
+<br />
+ 
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-3.php'"/> </div>
   </body>
 </html>
