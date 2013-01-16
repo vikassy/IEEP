@@ -1,5 +1,4 @@
 <?php
-
 include("class.login.php");
 $log = new logmein();
 $log->encrypt = true; //set encryption

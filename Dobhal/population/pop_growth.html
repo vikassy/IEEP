@@ -1,0 +1,215 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>amCharts examples</title>
+        <link rel="stylesheet" href="../amcharts/style.css" type="text/css">
+        <script src="../amcharts/amcharts.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+            var chart;
+
+            var chartData = [{
+                year: 1,
+                pol : 200,
+				po : "200 million"
+            },
+			{
+                year: 1000,
+                pol : 275,
+				po : "275 million"
+            },
+			{
+                year: 1500,
+                pol : 450,
+                po : "450 million"
+			},
+			{
+                year: 1650,
+                pol : 500,
+				po : "500 million"
+            },
+			{
+                year: 1750,
+                pol : 700,
+				po : "700 million"
+            },
+			{
+                year: 1804,
+                pol : 1000,
+				po : "1 billion"
+            },
+			{
+                year: 1850,
+                pol : 1200,
+				po : "1.2 billion"
+            },
+			{
+                year: 1900,
+                pol : 1600,
+				po : "1.6 billion"
+            },
+			{
+                year: 1927,
+                pol : 2000,
+				po : "2 billion"
+            },
+			{
+                year: 1950,
+                pol : 2550,
+				po : "2.55 billion"
+            },
+			
+			{
+                year: 1960,
+                pol : 3000,
+				po : "3 billion"
+            },
+			{
+                year: 1975,
+                pol : 4000,
+				po : "4 billion"
+            },
+			{
+                year: 1980,
+                pol : 4500,
+				po : "4.5 billion"
+            },
+			{
+                year: 1990,
+                pol : 5300,
+				po : "5.3 billion"
+            },
+			{
+                year: 1999,
+                pol : 6000,
+				po : "6 billion"
+            },
+			{
+                year: 2011,
+                pol : 7000,
+				po : "7 billion"
+            },
+			{
+                year: 2025,
+                pol : 8000,
+				po : "8 billion"
+            },
+			{
+                year: 2043,
+                pol : 9000,
+				po : "9 billion"
+            },
+			{
+                year: 2083,
+                pol : 10000,
+				po : "10 billion"
+            } 
+			];
+
+
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
+                chart.dataProvider = chartData;
+                chart.categoryField = "year";
+                chart.startDuration = 1;
+				chart.startEffect = '>';
+                chart.plotAreaBorderColor = "#DADADA";
+                chart.plotAreaBorderAlpha = 1;
+                // this single line makes the chart a bar chart          
+                chart.rotate = true;
+
+                // AXES
+                // Category
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.gridPosition = "start";
+				 categoryAxis.title = "Year"
+                categoryAxis.gridAlpha = 0.1;
+                categoryAxis.axisAlpha = 0;
+
+                // Value
+                var valueAxis = new AmCharts.ValueAxis();
+                valueAxis.axisAlpha = 0;
+                valueAxis.gridAlpha = 0.1;
+                valueAxis.position = "bottom";
+				valueAxis.title = "Population";
+                chart.addValueAxis(valueAxis);
+
+                // GRAPHS
+                // first graph
+                var graph1 = new AmCharts.AmGraph();
+                graph1.type = "column";
+                graph1.title = "Population Growth";
+                graph1.valueField = "pol";
+                graph1.balloonText = "[[year]]:[[po]]";
+                graph1.lineAlpha = 0;
+                graph1.fillColors = ["#8181d9","#333356"];
+                graph1.fillAlphas = 1;
+                chart.addGraph(graph1);
+            
+			var guide = new AmCharts.Guide();
+                guide.value = 0;
+                guide.toValue = 2000;
+                guide.fillColor = "#333356";
+                guide.fillAlpha = 0.2;
+                guide.lineAlpha = 0;
+                valueAxis.addGuide(guide);
+
+                var guide = new AmCharts.Guide();
+                guide.value = 2000;
+                guide.toValue = 4000;
+                guide.fillColor = "#333356";
+                guide.fillAlpha = 0.15;
+                guide.lineAlpha = 0;
+                valueAxis.addGuide(guide);
+
+                var guide = new AmCharts.Guide();
+                guide.value = 4000;
+                guide.toValue = 6000;
+                guide.fillColor = "#333356";
+                guide.fillAlpha = 0.1;
+                guide.lineAlpha = 0;
+                valueAxis.addGuide(guide);
+
+                var guide = new AmCharts.Guide();
+                guide.value = 6000;
+                guide.toValue = 8000;
+                guide.fillColor = "#333356";
+                guide.fillAlpha = 0.05;
+                guide.lineAlpha = 0;
+                valueAxis.addGuide(guide);
+
+                var guide = new AmCharts.Guide();
+                guide.value = 8000;
+                guide.toValue = 10000;
+                guide.fillColor = "#333356";
+                guide.fillAlpha = 0.05;
+                guide.lineAlpha = 0;
+                valueAxis.addGuide(guide);
+
+                var guide = new AmCharts.Guide();
+                guide.value = 10000;
+                guide.toValue = 12000;
+                guide.fillColor = "#333356";
+                guide.fillAlpha = 0.1;
+                guide.lineAlpha = 0;
+                valueAxis.addGuide(guide);
+
+              
+               
+				            
+               
+
+                // WRITE
+                chart.write("chartdiv");
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div id="chartdiv" style="width: 500px; height: 600px;"></div>
+    </body>
+
+</html>

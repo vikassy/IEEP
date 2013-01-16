@@ -6,11 +6,13 @@ session_start();
 class logmein {
     //database setup
        //MAKE SURE TO FILL IN DATABASE INFO
-    var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
-    var $database_logon = 'IEEP';       //Database NAME
-    var $username_logon = 'IEEP';       //Database USERNAME
-    var $password_logon = 'Random123!@#';       //Database PASSWORD
     
+//---------------------Coomment this file while deploying ---------------------------//
+    var $hostname_logon = 'localhost';      //Database server LOCATION
+    var $database_logon = 'IEEP';       //Database NAME
+    var $username_logon = 'root';       //Database USERNAME
+    var $password_logon = 'root';       //Database PASSWORD
+//---------------------Coomment this file while deploying -----------------------/
     //table fields
     var $email_column = 'email';
     var $user_table = 'student';          //Users table name
@@ -20,7 +22,9 @@ class logmein {
     
     //encryption
     var $encrypt = false;       //set to true to use md5 encryption for the password
- 
+    
+    var $user = array(); 
+
     //connect to database
     function dbconnect(){
         $connections = mysql_connect($this->hostname_logon, $this->username_logon, $this->password_logon) or die ('Unabale to connect to the database');
@@ -66,6 +70,7 @@ class logmein {
  
     //prevent injection
     function qry($query) {
+      
       $this->dbconnect();
       $args  = func_get_args();
       $query = array_shift($args);
@@ -73,6 +78,7 @@ class logmein {
       $args  = array_map('mysql_real_escape_string', $args);
       array_unshift($args,$query);
       $query = call_user_func_array('sprintf',$args);
+      //echo $query;
       $result = mysql_query($query) or die(mysql_error());
           if($result){
             return $result;
@@ -100,10 +106,19 @@ class logmein {
             $this->user_column = $user_column;
         }
         if($this->user_table == ""){
-            $this->user_table = $user_table;
+          $this->user_table = $user_table;
         }
         //exectue query
         $result = $this->qry("SELECT * FROM ".$this->user_table." WHERE ".$this->pass_column." = '?';" , $logincode);
+        $details=mysql_fetch_row($result);
+        $total_column=mysql_num_fields($result);
+        $i=0;
+        while($i < $total_column)
+        {
+          $columns_key = mysql_field_name($result,$i);
+          $this->user[$columns_key] = $details[$i];
+            $i++;
+        }
         $rownum = mysql_num_rows($result);
         //return true if logged in and false if not
         if($row != "Error"){
@@ -114,6 +129,49 @@ class logmein {
             }
         }
     }
+    function composeMail($email_id,$msg,$subject)
+    {
+        $to = stripslashes($email_id);
+        //echo $to;
+        //some injection protection
+        $illegals=array("%0A","%0D","%0a","%0d","bcc:","Content-Type","BCC:","Bcc:","Cc:","CC:","TO:","To:","cc:","to:");
+        $to = str_replace($illegals, "", $to);
+        $getemail = explode("@",$to);
+ 
+        //send only if there is one email
+        if(sizeof($getemail) > 2){
+            return $success=3;
+        }
+        else
+        {
+            //send email
+            $from = $_SERVER['SERVER_NAME'];
+            //now we need to set mail headers
+            $headers = "MIME-Version: 1.0 rn" ;
+            $headers .= "Content-Type: text/html; \r\n" ;
+            $headers .= "From: $from  \r\n" ;
+            //now we are ready to send mail
+            $sent = mail($to, $subject, $msg, $headers);
+           if($sent)
+           {
+               $oput="Email msg sent to ".$to;
+               $success=1;
+           }
+           else
+           {
+                $oput="Email msg not sent to ".$to;
+                $success=2;
+            }
+            $d=date("y-m-d");
+            $t=date("H:i:s");
+            $oput="[".$d." ".$t."]".$oput."\n";
+            $fh=fopen("log.txt",'a');
+            fwrite($fh,$oput);
+            fclose($fh);
+            return $success;
+        }
+    }   
+    
  
     //reset password
     function passwordreset($email_id,$user_table, $pass_column,$email_column){
@@ -148,49 +206,12 @@ class logmein {
         if( mysql_affected_rows()==0){
             return 0;
         }
-        $to = stripslashes($email_id);
-        //echo $to;
-        //some injection protection
-        $illegals=array("%0A","%0D","%0a","%0d","bcc:","Content-Type","BCC:","Bcc:","Cc:","CC:","TO:","To:","cc:","to:");
-        $to = str_replace($illegals, "", $to);
-        $getemail = explode("@",$to);
- 
-        //send only if there is one email
-        if(sizeof($getemail) > 2){
-            return false;
-        }else{
-            //send email
-            $from = $_SERVER['SERVER_NAME'];
-            $subject = "Password Reset: ".$_SERVER['SERVER_NAME'];
-            $msg = "
- 
-Your new password is: ".$newpassword."
- 
-";
- 
-            //now we need to set mail headers
-            $headers = "MIME-Version: 1.0 rn" ;
-            $headers .= "Content-Type: text/html; \r\n" ;
-            $headers .= "From: $from  \r\n" ;
- 
-            //now we are ready to send mail
-            $sent = mail($to, $subject, $msg, $headers);
-            if($sent){
-                $oput="Email msg sent to ".$to;
-                $success=1;
-            }else{
-                
-                $oput="Email msg not sent to ".$to;
-                $success=1;
-            }
-            $d=date("y-m-d");
-            $t=date("H:i:s");
-            $oput="[".$d." ".$t."]".$oput."\n";
-            $fh=fopen("log.txt",'a');
-            fwrite($fh,$oput);
-            fclose($fh);
-            return $success;
-            }
+        $subject="TheGreenPlayground Password change request";
+        $msg="Hello User,\n
+              Your account password has been reset as requested.
+              Your new password is:".$newpassword."\nYou may visit the http://link www.thegreenplayground.org//login.php and login with this password
+              and change your password in your Profile settings page.\nThank You, \n TheGreenPlayground Team";
+        return $this->composeMail($email_id,$msg,$subject);
     }
  
     //create random password with 8 alphanumerical characters
