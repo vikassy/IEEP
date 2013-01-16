@@ -21,10 +21,10 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
   </head>
   <body style="font-family: Arial;border: 0 none;">
   <h1>
-  	Congratulations!
+  	Population
   </h1>
   <p>
-  	You have reached the end of this course!
+  	is defined as blah blah blah.
   </p>
   
   </body>

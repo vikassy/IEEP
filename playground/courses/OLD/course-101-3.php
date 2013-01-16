@@ -232,7 +232,7 @@
         <div id="chartdiv" style="width:800px; height:800px;"></div><br>
 <br>
  
-       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-7.php'"/> </div>
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-3.php'"/> </div>
     </body>
 
 </html>

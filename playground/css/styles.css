@@ -119,6 +119,11 @@ margin:5px;
 	cursor:pointer;
 }
 
+.level-marker-on {
+	opacity:1;
+}
+
+
 .level-marker:hover{
 	opacity:1;
 }

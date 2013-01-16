@@ -21,12 +21,12 @@
 </div>
   <div class="container" id="header-container">
     <div class="row" id="header">
-      <div class="onecol"  onClick="loadUrl('courses/course-101/course-101-1.html'')" style="cursor:pointer;">  </div>
+      <div class="onecol"  style="cursor:pointer;">  </div>
        <div class="onecol" > </div>
       <div class="eightcol">
         <h1>Playground</h1>
       </div>
-      <div class="twocol  last">  <div id="user-name">NewUser</div></div>
+      <div class="twocol  last">  <div id="user-name">Demo User</div></div>
     </div>
   </div>
   <br />
@@ -40,7 +40,9 @@
 
 
     
-     <div class="course" onClick="window.location='course-101.php'">Environment 101</div>
+     <div class="course" onClick="window.location='course-101.php'">Environment 101</div>    <div class="course" onClick="window.location='course-101.php'">Environment 101</div>
+     <br>
+   <div class="course" onClick="window.location='course-101.php'">Environment 101</div>
      
      
      

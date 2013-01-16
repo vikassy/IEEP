@@ -21,11 +21,13 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
   </head>
   <body style="font-family: Arial;border: 0 none;">
   <h1>
-  	Congratulations!
+  	Population
   </h1>
   <p>
-  	You have reached the end of this course!
-  </p>
-  
+  	is defined as blah blah blah.
+  </p><br />
+<br />
+ 
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-3.php'"/> </div>
   </body>
 </html>
