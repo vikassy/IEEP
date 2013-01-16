@@ -21,7 +21,7 @@
 </div>
   <div class="container" id="header-container">
     <div class="row" id="header">
-      <div class="onecol"  onClick="loadUrl('courses/course-101/course-101-1.html'')" style="cursor:pointer;">  </div>
+      <div class="onecol"  onClick="loadUrl('courses/course-101/course-101-1.html'')" style="cursor:pointer;"> Dashboard </div>
        <div class="onecol" > </div>
       <div class="eightcol">
         <h1>Playground</h1>
@@ -31,19 +31,30 @@
   </div>
   <br />
   <div class="container">
+    <div class="row" id="body-head">
+      <div class="threecol"> <div id="course-name">Environment 101</div> </div>
+      <div class="sixcol">
+      <!-- Dynamically generated -->
+        <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-1.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-2.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-3.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-4.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-5.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-6.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-7.php',this)"> </div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-8.php',this)"> </div>
+        <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-9.php',this)"> </div>
+          <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-10.php',this)"> </div>
+       <!-- Dynamically generated -->
+      </div>
+      <div class="threecol last"> </div>
+    </div>
+  </div>
   <div class="row" >
     <div class="onecol"> </div>
     <div class="tencol" id="body-content">
-  <h1>   Welcome to the Dashboard.</h1><br>
-	<h2>Available Courses:</h2><br><br>
-<br>
-
-
-    
-     <div class="course" onClick="window.location='course-101.php'">Environment 101</div>
-     
-     
-     
+      <iframe onload="calcHeight()" src="courses/course-101/course-101-1.php" id="main-frame" height="100%" ></iframe>
+      <div id="loading">Loading.</div>
     </div>
     <div class="onecol last"> </div>
   </div>
