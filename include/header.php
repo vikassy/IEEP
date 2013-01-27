@@ -35,10 +35,10 @@
            ?>
         <ul class="nav pull-right" id="main-menu-right">
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $log->user["username"]; ?><b class="caret"></b></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $log->user["name"]; ?><b class="caret"></b></a>
             <ul class="dropdown-menu" id="swatch-menu">
-              <li><a href="profile.php">Profile</a></li>
-              <li><a href="editprofile.php">Profile Settings</a></li>
+             <!-- <li><a href="profile.php">Profile</a></li>
+              <li><a href="editprofile.php">Profile Settings</a></li>-->
               <li><a href="logout.php">Logout</a></li>
             </ul>
           </li>

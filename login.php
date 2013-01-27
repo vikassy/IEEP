@@ -23,7 +23,7 @@
               }
               elseif(isset($_REQUEST['xyz']))
               {
-                echo "<div class='alert alert-error'> Email ID not found, Please <a href='signup.html'>Sign up</a> </div>";
+                echo "<div class='alert alert-error'> Email ID not found, Please <a href='signup.php'>Sign up</a> </div>";
               }
               elseif(isset($_REQUEST['success']))
               {
