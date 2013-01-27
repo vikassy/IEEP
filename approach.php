@@ -1,4 +1,4 @@
-<?php include("include/header.php"); ?>
+<?php include_once("include/header.php"); ?>
 
  <h3>Approach</h3>
   </div>

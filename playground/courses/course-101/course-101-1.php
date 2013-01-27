@@ -18,12 +18,8 @@ Welcome To Environment 101!
 <br/>
 <div class="course-progress">
  <!-- Dynamically generated -->
-	0%
+	56%
      <!-- Dynamically generated -->
-     <br />
-<br />
- 
-       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-2.php'"/> </div>
 </div>
 </body>
 </html>

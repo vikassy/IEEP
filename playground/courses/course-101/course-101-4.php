@@ -7,157 +7,198 @@
         <link rel="stylesheet" href ="https://sites.google.com/site/tushardobhal/data-viz/style.css?attredirects=0&d=1" type="text/css">
         <script src="../js/amcharts.js" type="text/javascript"></script>        
         <link type="text/css" rel="stylesheet" href="../css/common.css"  /><link type="text/css" rel="stylesheet" href="../css/buttons.css"  />
-       <script type="text/javascript">
+        <script type="text/javascript">
             var chart;
-			var value;
 
-             window.onload = function() {
-				 value = "life_expectancy0";
-				 effect = "bounce";
-            createChart();            
-                                               
-        }
-
-            function createChart()
+            var chartData = [{
+                year: "1950",
+                europe:"547460",
+                namerica: "171615",
+                asia: "1402887",
+                lamerica: "167307",
+                oceania: "12807",
+                africa: "227270",
+				world: "2529346"
+            }, {
+                year: "1975",
+                europe:"676207",
+                namerica:"242360" ,
+                asia: "2379374",
+                lamerica: "323323",
+                oceania: "21286",
+                africa: "418765",
+				world: "4061317"
+            },
 			{
-				var chartData = [{
-                mineral: "Coal",
-                life_expectancy0:216,
-				life_expectancy2:84,
-				life_expectancy5:49,
-				
-				des:"841,000 Million Metric Tonnes"
-			 },
-			 {
-                mineral: "Crude Oil",
-                life_expectancy0:44,
-				life_expectancy2:31,
-				life_expectancy5:23,
-				
-				des:"1,035 Billion Barrels"
-			 },
-			 {
-                mineral: "Natural Gas",
-                life_expectancy0:64,
-				life_expectancy2:41,
-				life_expectancy5:29,
-				
-				des:"5,145 Trillion Cubic Feet"
-			 },
-			 {
-                mineral: "Aluminium",
-                life_expectancy0:202,
-				life_expectancy2:81,
-				life_expectancy5:48,
-				des:"28,000 Million Metric Tonnes"
-			 },
-			 {
-                mineral: "Copper",
-                life_expectancy0:28,
-				life_expectancy2:22,
-				life_expectancy5:18,
-				
-				des:"630,000 Thousand Metric Tonnes"
-			 },
-			 {
-                mineral: "Iron",
-                life_expectancy0:132,
-				life_expectancy2:65,
-				life_expectancy5:41,
-				
-				des:"180,000 Million Metric Tonnes"
-			 },
-			 {
-                mineral: "Lead",
-                life_expectancy0:21,
-				life_expectancy2:17,
-				life_expectancy5:14,
-				
-				des:"64,000 Thousand Metric Tonnes"
-			 },
-			  {
-                mineral: "Silver",
-                life_expectancy0:17,
-				life_expectancy2:15,
-				life_expectancy5:13,
-				
-				des:"510,000 Metric Tonnes"
-			 },
-			  {
-                mineral: "Tin",
-                life_expectancy0:37,
-				life_expectancy2:28,
-				life_expectancy5:21,
-				
-				des:"5200 Thousand Metric Tonnes"
-			 } 
-			];
+                year: "2000",
+                europe:"726568" ,
+                namerica: "318654",
+                asia: "3698296",
+                lamerica: "521228",
+                oceania: "31160",
+                africa: "819462",
+				world: "6115367"
+            },
+			{
+                year: "2010",
+                europe:"732759" ,
+                namerica:"351659",
+                asia: "4166741",
+                lamerica: "588649",
+                oceania: "35838",
+                africa: "1033043",
+				world: "6908688"
+            },
+			{
+                year: "2025",
+                europe:"729264",
+                namerica: "397522",
+                asia: "4772523",
+                lamerica: "669533",
+                oceania: "42507",
+                africa: "1400184",
+				world: "8011533"
+            },
+			{
+                year: "2050",
+                europe:"691048" ,
+                namerica: "448464",
+                asia: "5231485",
+                lamerica: "729184",
+                oceania: "51338",
+                africa: "1998466",
+				world: "9149984"
+            }];
 
-                // PIE CHART
-                chart = new AmCharts.AmPieChart();
-
-                // title of the chart
-                chart.addTitle("Life Expectancy of various Minerals at different Growth Rates", 16);
-
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
                 chart.dataProvider = chartData;
-                chart.titleField = "mineral";
-                chart.valueField = value;
-				chart.descriptionField = "des";
-                chart.sequencedAnimation = true;
-                chart.startEffect = effect;
-                chart.innerRadius = "30%";
-                chart.startDuration = 2;
-                chart.labelRadius = 15;
-				radius = 200;
-				chart.outlineAlpha = 1;
-				chart.outlineColor = "#FFFFFF";
-				chart.outlineThickness = 2;
+				chart.addTitle("World Population (*1000)",16);
+                chart.categoryField = "year";
+                chart.plotAreaBorderAlpha = 0.2;
+				chart.startDuration = 1;
 
-                // the following two lines makes the chart 3D
-                chart.depth3D = 20;
-                chart.angle = 40;
+                // AXES
+                // category
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.gridAlpha = 0.1;
+                categoryAxis.axisAlpha = 0;
+                categoryAxis.gridPosition = "start";
+
+                // value
+                var valueAxis = new AmCharts.ValueAxis();
+                valueAxis.stackType = "regular";
+                valueAxis.gridAlpha = 0.1;
+                valueAxis.axisAlpha = 0;
+                chart.addValueAxis(valueAxis);
+
+                // GRAPHS
+                // first graph    
+                var graph = new AmCharts.AmGraph();
+                graph.title = "Asia";
+                graph.labelText = "[[value]]";
+                graph.valueField = "asia";
+				graph.balloonText = "Asia:[[value]]";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.lineColor = "#C72C95";
+                chart.addGraph(graph);
+
+                // second graph              
+                graph = new AmCharts.AmGraph();
+                graph.title = "Africa";
+                graph.labelText = "[[value]]";
+				graph.balloonText = "Africa:[[value]]";
+                graph.valueField = "africa";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.lineColor = "#D8E0BD";
+                chart.addGraph(graph);
+
+                // third graph                              
+                graph = new AmCharts.AmGraph();
+                graph.title = "Europe";
+                graph.labelText = "[[value]]";
+				graph.balloonText = "Europe:[[value]]";
+                graph.valueField = "europe";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.lineColor = "#B3DBD4";
+                chart.addGraph(graph);
+
+                // fourth graph  
+                graph = new AmCharts.AmGraph();
+                graph.title = "Latin America and the Caribbean";
+                graph.labelText = "[[value]]";
+				graph.balloonText = "Latin America and the Caribbean:[[value]]";
+                graph.valueField = "lamerica";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.lineColor = "#69A55C";
+                chart.addGraph(graph);
+
+                // fifth graph
+                graph = new AmCharts.AmGraph();
+                graph.title = "North America";
+                graph.labelText = "[[value]]";
+				graph.balloonText = "North America:[[value]]";
+                graph.valueField = "namerica";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.lineColor = "#B5B8D3";
+                chart.addGraph(graph);
+
+                // sixth graph   
+                graph = new AmCharts.AmGraph();
+                graph.title = "Oceania";
+                graph.labelText = "[[value]]";
+				graph.balloonText = "Oceania:[[value]]";
+                graph.valueField = "oceania";
+                graph.type = "column";
+                graph.lineAlpha = 0;
+                graph.fillAlphas = 1;
+                graph.lineColor = "#F4E23B";
+                chart.addGraph(graph);
 				
-				chart.balloonText = "[[title]]: [[value]] years,\n Reserve:[[description]]";
-				chart.write("chartdiv");
-			}
+				graph1 = new AmCharts.AmGraph();
+                graph1.title = "World";
+                graph1.labelText = "[[value]]";
+				graph1.balloonText = "World:[[value]]";
+                graph1.valueField = "world";
+                graph1.type = "line";
+                graph1.lineThickness = 2;
+                graph1.bullet = "round";
+                chart.addGraph(graph1);
+
                
-			   
-			    function set()
-				{
-					 if (document.getElementById("rb1").checked)
-					 {
-						  value = "life_expectancy0";
-						  effect = "bounce";
-						    
-					 }
-					 
-					 else if(document.getElementById("rb2").checked)
-					 {
-						  value = "life_expectancy2";
-						   effect = "elastic";
-					 }
-					 else
-					 {
-						  value = "life_expectancy5";
-						  effect = "<";
-					 }
-					 createChart();
-				}
-              
-                
-                
-            
+
+                // LEGEND                  
+                var legend = new AmCharts.AmLegend();
+                legend.position = "right";
+				legend.borderAlpha = 0.2;
+                legend.horizontalGap = 10;
+                chart.addLegend(legend);
+				chart.depth3D = 30;
+
+                // WRITE
+                chart.write("chartdiv");
+            });
+
+           
+
+
+          
         </script>
     </head>
     
     <body>
-        <div id="chartdiv" style="width:800px; height:600px;"></div>
-        <div style="margin-left:35px;">
-            <input type="radio" checked="true" name="group" id="rb1" onClick="set()">Growth Rate - 0%
-            <input type="radio" name="group" id="rb2" onClick="set()">Growth Rate - 2%
-            <input type="radio" name="group" id="rb3" onClick="set()">Growth Rate - 5%
-		</div>        
-           <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-5.php'"/> </div>
+        <div id="chartdiv" style="width: 900px; height: 600px;"></div>
     </body>
 
 </html>

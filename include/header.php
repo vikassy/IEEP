@@ -1,3 +1,4 @@
+<?php ini_set("include_path", "./include:../include:.:./..:./:..".ini_get("include_path")); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,7 +22,7 @@
          <span class="icon-bar"></span>
        </a><div class="nav-collapse" id="main-menu">
        <?php 
-       include("class.login.php");
+       include_once("class.login.php");
        $log = new logmein();
         $log->encrypt = true; //set encryption
        if ($log->logincheck($_SESSION['loggedin'],"student", "password", "username") != 1) { ?>

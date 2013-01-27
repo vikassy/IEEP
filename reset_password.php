@@ -1,5 +1,5 @@
-<?php include("include/header.php"); ?>
-<?php include 'include/unauthorize.php'; ?> 
+<?php include_once("include/header.php"); ?>
+<?php include_once('include/unauthorize.php'); ?> 
  <h3>Interactive Environmental Education Portal</h3>
   </div>
 

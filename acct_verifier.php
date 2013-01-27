@@ -1,7 +1,7 @@
 <?php
     
-    include("class.login.php");
-    include("include/unauthorize.php");
+    include_once("class.login.php");
+    include_once("include/unauthorize.php");
     $log=new logmein();
     $username=$_POST['username'];
     $a1=$_POST['a1'];

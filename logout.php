@@ -1,5 +1,5 @@
 <?php
-include("class.login.php");
+include_once("class.login.php");
 $log = new logmein();
 $log->encrypt = true; //set encryption
 $log->logout();

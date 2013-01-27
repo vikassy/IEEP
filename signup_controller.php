@@ -1,6 +1,6 @@
 <?php
-include 'include/unauthorize.php';
-include("class.login.php");
+include_once('include/unauthorize.php');
+include_once("class.login.php");
 $log=new logmein();
 $log->encrypt=true;
 $flag=1;
