@@ -52,6 +52,9 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
     </script>
   </head>
   <body style="font-family: Arial;border: 0 none;">
-    <div id="visualization" style="height: 700px; width:400px; margin:auto;"></div>
+    <div id="visualization" style="height: 700px; width:400px; margin:auto;"></div><br />
+<br />
+ 
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-10.php'"/> </div>
   </body>
 </html>

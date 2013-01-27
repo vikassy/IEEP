@@ -21,12 +21,12 @@
 </div>
   <div class="container" id="header-container">
     <div class="row" id="header">
-      <div class="onecol"  onClick="loadUrl('courses/course-101/course-101-1.html'')" style="cursor:pointer;"> Dashboard </div>
+      <div class="onecol"  onClick="window.location='index.php'" style="cursor:pointer;"> Dashboard </div>
        <div class="onecol" > </div>
       <div class="eightcol">
         <h1>Playground</h1>
       </div>
-      <div class="twocol  last">  <div id="user-name">Demo User</div></div>
+      <div class="twocol  last">  <div id="user-name">Guest User</div></div>
     </div>
   </div>
   <br />
@@ -43,8 +43,6 @@
       	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-6.php',this)">5</div>
       	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-7.php',this)">6</div>
       	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-8.php',this)">7</div>
-        <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-9.php',this)">8</div>
-          <div class="level-marker" onClick="loadUrl('courses/course-101/course-101-10.php',this)">9</div>
        <!-- Dynamically generated -->
       </div>
       <div class="threecol last"> </div>

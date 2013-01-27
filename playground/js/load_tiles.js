@@ -61,13 +61,6 @@ $.ajax({
 });
 
 
-$.ajax({
-    url:"poll.php",
-    success: function(data) {
-      document.getElementById("poll").innerHTML=data+"<input type='button' value='yes' onclick='poll_no();' /><input type='button' value='no' onclick='poll_yes();' />";
-	  qsn=data;
-    }
-});
 
 
 }//end of temp_poll()

@@ -11,6 +11,8 @@
 
 
 <h4>Members</h4>
+<li><b>Chandramouli Sharma</b> </li>
+<p> Project Lead : He is also a nature enthusiast. In the past he has taken up various environmental initiatives. More about him can be found <a href="http://www.about.me/chandramouli.sharma">here</a> </br>
 <li><b>Dr Sumam David</b> </li>
 <p> She is the branch counsellor of NITK IEEE. She is the person responsible for evaluating projects which NITK IEEE takes up. More about her can be found <a href="http://sumam.nitk.ac.in/">here</a>
 </p> 
@@ -18,10 +20,8 @@
 <p> She serves as the Chairperson of NITK IEEE. She is also the  <i>"school outreach" </i> lead for this project. More about her can be found <a href="http://in.linkedin.com/pub/madhuri-shanbhogue/27/759/545">here</a> 
 <li><b>Roshni Chandrashekhar</b> </li>
 <p> She is currently pursuing her Masters in Computer Science from University of California, San Diego. She serves as a mentor for the project. More about her can be found  <a href="http://www.linkedin.com/profile/view?id=133988269&locale=en_US&trk=tyah">here</a>  <p> 
-<li><b>Chandramouli Sharma</b> </li>
-<p> He leads the software development of the project. He is also a nature enthusiast. In the past he has taken up various environmental initiatives. More about him can be found <a href="http://www.about.me/chandramouli.sharma">here</a> </br>
 
-<h5>Developor Team</h5>
+<h5>Developer Team</h5>
 <li>Atif Ahmed </li>
 <li>Chethan N </li>
 <li>Dhruv Chand</li>

@@ -1,6 +1,4 @@
 <?php include_once("include/header.php"); ?>
-
- <h3 style = "color:green">The Green Playground</h3>
   </div>
 
 
@@ -13,13 +11,11 @@
     </div>
 
     <div class="span7">
-      <h3>Welcome to IEEP!</h3>
-      <p>Welcome to IEEP. This is an unconventional course aimed at teaching environmental science in an interactive way.
-   If you are reading this you are most probably a homo sapien (human being). Join millions of other species and 
-  natural wonders of this earth to learn more about the world around you.</p>
+      <h3>Welcome to The Green Playground</h3>
+      <p>The Green Playground is an unconventional course aimed at teaching environmental science in an interactive way. It makes extensive and interactive use of data visualization of the free data sets from World Bank and United Nations. It aims to bring together students and teachers across the globe to think about the global problems and take local actions.</p>
   <br />
   So what are you waiting for?&nbsp; 
-  <a class="btn btn-primary btn-large" onclick="window.open ('signup.php','_self',false)">Signup</a>&nbsp;now!!
+  <a class="btn btn-primary btn-large" onclick="window.open ('signup.php','_self',false)">Signup</a>&nbsp;now!! or <a class="btn btn-primary btn-large" onclick="window.open ('./playground/index.php','_self',false)">Take a tour</a>
 
     
     </div>
