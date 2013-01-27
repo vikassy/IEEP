@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>amCharts examples</title>
+        <link rel="stylesheet" href="../amcharts/style.css" type="text/css">
+        <script src="../amcharts/amcharts.js" type="text/javascript"></script>         
+        <script type="text/javascript">
+            var chart;
+
+             window.onload = function() {
+            createChart();            
+                                               
+        }
+
+            function createChart()
+			{
+				var chartData = [{
+                cause: "Electricity and heat",
+                perc: 24.9,
+				}, 
+				{
+                cause: "Industry",
+                perc: 14.7,
+				},
+				{
+                cause: "Transportation",
+                perc: 14.3,
+				},
+				{
+                cause: "Agriculture",
+                perc: 13.8,
+				},
+				{
+                cause: "Land use change",
+                perc: 12.2,
+				},
+				{
+                cause: "Other fuel combustion",
+                perc: 8.6,
+				},
+				{
+                cause: "Industrial processes",
+                perc: 4.3,
+				},
+				{
+                cause: "Fugitive emissions",
+                perc: 4.0,
+				},
+				{
+                cause: "Waste",
+                perc: 3.2,
+				}];
+
+                // PIE CHART
+                chart = new AmCharts.AmPieChart();
+
+                // title of the chart
+                chart.addTitle("Sources of Greenhouse Gases", 16);
+
+                chart.dataProvider = chartData;
+                chart.titleField = "cause";
+                chart.valueField = "perc";
+                chart.sequencedAnimation = true;
+                chart.startEffect = "elastic";
+                chart.innerRadius = "30%";
+                chart.startDuration = 2;
+                chart.labelRadius = 15;
+				radius = 200;
+				
+
+                // the following two lines makes the chart 3D
+              
+				
+				chart.balloonText = "[[title]]: [[value]]%";
+
+               
+                // WRITE                                 
+                chart.write("chartdiv");
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="chartdiv" style="width:800px; height:800px;"></div>
+    </body>
+
+</html>
