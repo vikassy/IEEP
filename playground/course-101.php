@@ -26,7 +26,17 @@
       <div class="eightcol">
         <h1>Playground</h1>
       </div>
-      <div class="twocol  last">  <div id="user-name">Guest User</div></div>
+      <div class="twocol  last">  <div id="user-name">
+        <?php 
+       include_once("../class.login.php");
+       $log = new logmein();
+        $log->encrypt = true; //set encryption
+       if ($log->logincheck($_SESSION['loggedin'],"student", "password", "username") != 1) { ?>
+        Guest User
+        <? }
+        else 
+        echo $log->user["name"].'<a href="../logout.php" style="color: white; text-decoration: none;">(Logout)</a>'; ?>
+    </div></div>
     </div>
   </div>
   <br />
@@ -36,13 +46,13 @@
       <div class="sixcol">
       <!-- Dynamically generated -->
         <div class="level-marker level-marker-on" onClick="loadUrl('courses/course-101/course-101-1.php',this)">0</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-2.php',this)">1</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-3.php',this)">2</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-4.php',this)">3</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-5.php',this)">4</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-6.php',this)">5</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-7.php',this)">6</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-8.php',this)">7</div>
+      	<div class="level-marker">1</div>
+      	<div class="level-marker">2</div>
+      	<div class="level-marker">3</div>
+      	<div class="level-marker">4</div>
+      	<div class="level-marker">5</div>
+      	<div class="level-marker">6</div>
+      	<div class="level-marker">7</div>
        <!-- Dynamically generated -->
       </div>
       <div class="threecol last"> </div>

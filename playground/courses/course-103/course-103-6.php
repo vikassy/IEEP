@@ -39,5 +39,10 @@
   <br>
 
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
+     <?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(5,103);
+?>
   </body>
 </html>

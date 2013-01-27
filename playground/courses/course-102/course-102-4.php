@@ -246,7 +246,11 @@
 
 
         <div id="chartdiv" style="width:100%; height:400px;"></div>
- 
+ <?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(3,102);
+?>
 
     </body>
 

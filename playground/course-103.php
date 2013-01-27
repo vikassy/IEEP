@@ -26,7 +26,16 @@
       <div class="eightcol">
         <h1>Playground</h1>
       </div>
-      <div class="twocol  last">  <div id="user-name">Guest User</div></div>
+      <div class="twocol  last">  <div id="user-name"><?php 
+       include_once("../class.login.php");
+       $log = new logmein();
+        $log->encrypt = true; //set encryption
+       if ($log->logincheck($_SESSION['loggedin'],"student", "password", "username") != 1) { ?>
+        Guest User
+        <? }
+        else 
+        echo $log->user["name"].'<a href="../logout.php" style="color: white; text-decoration: none;">(Logout)</a>'; ?>
+    </div></div>
     </div>
   </div>
   <br />

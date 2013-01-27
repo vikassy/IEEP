@@ -160,6 +160,12 @@ The various life expectancy (Years a particular mineral will be available) of di
             <input type="radio" name="group" id="rb2" onclick="set()">Growth Rate - 2%
             <input type="radio" name="group" id="rb3" onclick="set()">Growth Rate - 5%
 		</div>        
+
+		<?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(4,102);
+?>
     </body>
 
 </html>

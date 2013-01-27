@@ -166,6 +166,12 @@ In international public opinion surveys there is strong support for promoting re
 The Growth Rates of  Renewable Energy Capacity is shown 
 
         <div id="chartdiv" style="width: 100%; height: 600px;"></div>
+
+        <?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(5,102);
+?>
     </body>
 
 </html>

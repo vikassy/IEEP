@@ -54,5 +54,10 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
   CO2 is the major greenhouse gas whose concentration has increased mainly due to human factors. Here is a map displaying major countries and their CO2 emissions.<br />
 
     <div id="visualization" style="height: 800px; width: 800px;"></div>
+     <?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(4,103);
+?>
   </body>
 </html>

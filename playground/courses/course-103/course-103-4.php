@@ -140,6 +140,12 @@ The following figure shows the flows of energy between space, the atmosphere, an
 Human activity since the Industrial Revolution has increased the amount of greenhouse gases in the atmosphere, leading to increased radiative forcing from CO2, methane, tropospheric ozone, CFCs and nitrous oxide. The concentrations of CO2 and methane have increased by 36% and 148% respectively since 1750. The concentrations of various greenhouse gasses are shown:<br>
 
         <div id="chartdiv" style="width: 100%; height: 700px;"></div>
+
+         <?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(3,103);
+?>
     </body>
 
 </html>

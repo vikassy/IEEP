@@ -17,7 +17,7 @@ Welcome To Environment 103!
 </h2>
 <br/>
 <div class="course-progress">
-	56%
+	0%
 </div>
 </body>
 </html>

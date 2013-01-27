@@ -86,7 +86,11 @@ Renewability is a very popular topic and many natural resources can be categoriz
 
 Other types of classifications are shown in the Tree Map.<br />
 
-
+<?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(2,102);
+?>
 
   </body>
 </html>

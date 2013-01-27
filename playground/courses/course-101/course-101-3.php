@@ -57,26 +57,15 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
        
        
 
-        
-        <form class="questions" action="submit.php" method="post">        
-        <h2>Question 1</h2><br>
-        What is the CO2 emmision in your country?<br>       
-		<input type="text" name="q1"><br />
-        
-        <h2>Question 2</h2><br>
-        Which country has the maximum CO2 emmision?<br>       
-		<input type="radio" name="q3" value="good">Kuwait<br>
-		<input type="radio" name="q3" value="bad">Qatar<br>
-        <input type="radio" name="q3" value="bad">Aruba<br>
-		<input type="radio" name="q3" value="bad">Russia<br>
-        
+        <?php
+      include_once("include/load_question.php");
+      $quest = new question();
+      $quest->load_question(2,101);
+        ?>
+       
         <br>
 
-       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-4.php'"/> </div>
-       
-       
-        </form>
-        
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-4.php'"/> </div>        
 
   </body>
 </html>

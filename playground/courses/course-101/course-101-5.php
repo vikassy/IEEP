@@ -231,18 +231,11 @@
            
     
     
-    <form class="questions" action="submit.php" method="post">        
-        <h2>Question 1</h2><br>
-        In 2010 which natural resource was most widely used?<br>       
-		<input type="radio" name="q1">Coal<br />
-        <input type="radio" name="q1">Natural Gas<br />
-        <input type="radio" name="q1">Oil<br />
-        <input type="radio" name="q1">Nuclear Energy<br />
-        
-        <h2>Question 2</h2><br>
-        How much was the consumption of oil in 2010?<br>       
-		<input type="text" name="q2"><br />
-         </form>  
+   <?php
+        include_once("include/load_question.php");
+        $quest = new question();
+        $quest->load_question(4,101);
+        ?>
 	<div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-6.php'"/> </div>
     
     </body>

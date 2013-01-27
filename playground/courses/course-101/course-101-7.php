@@ -356,18 +356,15 @@
     <body>
         <div id="chartdiv" style="width: 100%; height: 400px;"></div>
         
-        <form class="questions" action="submit.php" method="post">        
-        <h2>Q1</h2><br>
-        Is such a huge rise in population <br>       
-		<input type="radio" name="q1" value="good">Good Thing<br>
-		<input type="radio" name="q1" value="bad">Bad Thing<br>
-        
+  <?php
+        include_once("include/load_question.php");
+        $quest = new question();
+        $quest->load_question(6,101);
+        ?>
         <br>
 
        <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-8.php'"/> </div>
        
-       
-        </form>
         
     </body>
 

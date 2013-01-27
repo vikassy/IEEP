@@ -62,7 +62,13 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
   <body style="font-family: Arial;border: 0 none; ">
     <div id="visualization" style="height: 800px; width: 800px;margin:auto;"></div><br />
 <br />
+
+    <?php
+    include_once("include/load_question.php");
+      $quest = new question();
+      $quest->load_question(7,101);
+    ?>
  
-       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-11.php'"/> </div>
+       <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-9.php'"/> </div>
   </body>
 </html>

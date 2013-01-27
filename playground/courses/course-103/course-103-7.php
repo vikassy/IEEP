@@ -91,6 +91,11 @@ Here is a pie chart depicting the various human activities that lead to the emis
 <br>
 
         <div id="chartdiv" style="width:800px; height:800px; margin:auto;"></div>
+         <?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(6,103);
+?>
     </body>
 
 </html>

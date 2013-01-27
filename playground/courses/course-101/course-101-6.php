@@ -232,6 +232,12 @@
         <div id="chartdiv" style="width:800px; height:800px;"></div><br>
 <br>
  
+    <?php
+        include_once("include/load_question.php");
+        $quest = new question();
+        $quest->load_question(5,101);
+        ?>
+
        <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-7.php'"/> </div>
        
         

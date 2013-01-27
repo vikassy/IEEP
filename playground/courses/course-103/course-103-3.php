@@ -650,7 +650,11 @@
 Global warming is the rise in the average temperature of Earth's atmosphere and oceans since the late 19th century and its projected continuation. Since the early 20th century, Earth's mean surface temperature has increased by about 0.8 °C (1.4 °F), with about two-thirds of the increase occurring since 1980.[2] Warming of the climate system is unequivocal, and scientists are more than 90% certain that it is primarily caused by increasing concentrations of greenhouse gases produced by human activities such as the burning of fossil fuels and deforestation. 
 The following visualization shows the change in temperature since 1880 – 
         <div id="chartdiv" style="width: 100%; height: 400px;"></div>
-             
+              <?php
+include_once("include/load_question.php");
+  $quest = new question();
+  $quest->load_question(2,103);
+?>
     </body>
 
 </html>

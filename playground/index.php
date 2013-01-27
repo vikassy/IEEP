@@ -28,7 +28,17 @@
       <div class="sixcol">
         <h1 style="margin-left:-180px">Playground</h1>
       </div>
-      <div class="twocol  last">  <div id="user-name">Guest User</div></div>
+      <div class="twocol  last">  <div id="user-name">
+        <?php 
+       include_once("../class.login.php");
+       $log = new logmein();
+        $log->encrypt = true; //set encryption
+       if ($log->logincheck($_SESSION['loggedin'],"student", "password", "username") != 1) { ?>
+        Guest User
+        <? }
+        else 
+        echo $log->user["name"].'<a href="../logout.php" style="color: white; text-decoration: none;">(Logout)</a>'; ?>
+       </div></div>
     </div>
   </div>
   <br />
@@ -36,16 +46,14 @@
   <div class="row" >
     <div class="onecol"> </div>
     <div class="tencol" id="body-content">
-  <h1>   Welcome to the Dashboard.</h1><br>
-	<h4>This is a work in progress and will be available completely at the end of January 2013. 
-    Meanwhile you can browse through Environment 101 and see the interactive visualizations</h4><br><br>
+  <h1>   Welcome to the Dashboard.</h1><br><br><br>
 <br>
 
 
     
      <div class="course" onClick="window.location='course-101.php'">Environment 101</div>&nbsp;
-     <div class="course"  onClick="window.location='course-102.php'">Environment 102</div>&nbsp;
-     <div class="course"  onClick="window.location='course-103.php'"">Environment 103</div>&nbsp;
+     <div class="course"  onClick="window.location='course-102.php'">Natural resources</div>&nbsp;
+     <div class="course"  onClick="window.location='course-103.php'">Climate change</div>&nbsp;
      
      
      

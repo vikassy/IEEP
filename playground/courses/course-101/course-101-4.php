@@ -159,16 +159,11 @@
 		</div>        
           
            
-        <form class="questions" action="submit.php" method="post">        
-        <h2>Question 1</h2><br>
-        At the present depletion rate what is the life expectancy of coal?<br>       
-		<input type="text" name="q1"><br />
-        
-        <h2>Question 2</h2><br>
-        What is the life expectancy of iron if the growth rate increases to 2%?<br>       
-		<input type="text" name="q2"><br />
-         </form>  
-
+        <?php
+		include_once("include/load_question.php");
+  		$quest = new question();
+  		$quest->load_question(3,101);
+		?>
 	 <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-5.php'"/> </div>
 
     </body>
