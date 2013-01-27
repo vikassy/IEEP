@@ -44,9 +44,9 @@
 
     
      <div class="course" onClick="window.location='course-101.php'">Environment 101</div>&nbsp;
-     <div class="course" title="Course content to be added">Environment 102</div>&nbsp;
-     <div class="course" title="Course content to be added">Environment 103</div>&nbsp;
-     <div class="course" title="Course content to be added">Environment 104</div>
+     <div class="course"  onClick="window.location='course-102.php'">Environment 102</div>&nbsp;
+     <div class="course"  onClick="window.location='course-103.php'"">Environment 103</div>&nbsp;
+     
      
      
      
