@@ -385,7 +385,7 @@
             <div class="controls">
               <select id="select01" name = 'school'>
                 <?php
-                    include_once("class.login.php");
+                    include("class.login.php");
                     $log=new logmein();
                     $result=$log->qry("SELECT * FROM school");
                     while($row=mysql_fetch_assoc($result))

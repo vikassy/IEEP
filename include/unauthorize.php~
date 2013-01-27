@@ -1,4 +1,5 @@
 <?php
+ini_set("include_path", "./include:../include:.:./..:./:..".ini_get("include_path"));
 include_once("class.login.php");
 $login = new logmein();
 $login->encrypt = true; //set encryption
