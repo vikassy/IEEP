@@ -54,6 +54,5 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
   <body style="font-family: Arial;border: 0 none;">
     <div id="visualization" style="height: 800px; width: 800px; margin:auto;"></div>
        <div style="text-align:center;"> <input  class="button primary" value="Next!" onClick="window.location='course-101-4.php'"/> </div>
-<text y="8" fill="#000000" font-family="Verdana" font-size="16" text-anchor="middle" transform="translate(702,20)" font-weight="bold"><tspan y="8" x="0">Average Temperature Anomoly</tspan></text>
   </body>
 </html>
