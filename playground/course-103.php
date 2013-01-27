@@ -32,17 +32,17 @@
   <br />
   <div class="container">
     <div class="row" id="body-head">
-      <div class="threecol"> <div id="course-name">Natural Resources</div> </div>
+      <div class="threecol"> <div id="course-name">Climate Change</div> </div>
       <div class="sixcol">
       <!-- Dynamically generated -->
-        <div class="level-marker level-marker-on" onClick="loadUrl('courses/course-101/course-101-1.php',this)">0</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-2.php',this)">1</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-3.php',this)">2</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-4.php',this)">3</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-5.php',this)">4</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-6.php',this)">5</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-7.php',this)">6</div>
-      	<div class="level-marker" onClick="loadUrl('courses/course-101/course-101-8.php',this)">7</div>
+        <div class="level-marker level-marker-on" onClick="loadUrl('courses/course-103/course-103-1.php',this)">0</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-103/course-103-2.php',this)">1</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-103/course-103-3.php',this)">2</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-103/course-103-4.php',this)">3</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-103/course-103-5.php',this)">4</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-103/course-103-6.php',this)">5</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-103/course-103-7.php',this)">6</div>
+      	<div class="level-marker" onClick="loadUrl('courses/course-103/course-103-8.php',this)">7</div>
        <!-- Dynamically generated -->
       </div>
       <div class="threecol last"> </div>
@@ -51,7 +51,7 @@
   <div class="row" >
     <div class="onecol"> </div>
     <div class="tencol" id="body-content">
-      <iframe onload="calcHeight()" src="courses/course-101/course-101-1.php" id="main-frame" height="100%" ></iframe>
+      <iframe onload="calcHeight()" src="courses/course-103/course-103-1.php" id="main-frame" height="100%" ></iframe>
       <div id="loading">Loading.</div>
     </div>
     <div class="onecol last"> </div>
