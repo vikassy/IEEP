@@ -73,7 +73,7 @@ if (isset($_REQUEST['sub']))
     if ($log->logincheck($_SESSION['loggedin'],"student", "password", "username") == 1)
     {
         // window.location('')   
-        // echo $log->user["username"];
+        // echo $log->user["username"];xc`
         $result = mysql_query("SELECT * FROM progress WHERE username = '".$log->user['username']."'");      
         $course = "course".$_REQUEST['course'];
         // echo $course;
