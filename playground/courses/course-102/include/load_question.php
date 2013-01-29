@@ -10,10 +10,12 @@ class question
    // var $database_logon = 'IEEP';       //Database NAME
    // var $username_logon = 'root';       //Database USERNAME
    // var $password_logon = 'root';       //Database PASSWORD
-    var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
+   var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
     var $database_logon = 'IEEP';       //Database NAME
     var $username_logon = 'IEEP';       //Database USERNAME
     var $password_logon = 'Random123!@#';   
+
+
     function dbconnect(){
         $connections = mysql_connect($this->hostname_logon, $this->username_logon, $this->password_logon) or die ('Unabale to connect to the database');
         mysql_select_db($this->database_logon) or die ('Unable to select database!');
@@ -38,19 +40,29 @@ class question
         }
         echo "<input type='hidden' name='level' value='".$level_id."' />";
         echo "<input type='hidden' name='course' value='".$course_id."' />";
-        echo "<input type='submit' name='sub' value='Submit' />";
+        if (mysql_num_rows($result) > 0 )
+        echo "<input class='button primary' type='submit' name='sub' value='Submit' />";
         echo "</form> <br /> ";
     }
 }
 // echo "ifubiu";
 if (isset($_REQUEST['sub']))
 {
+    echo '<script src="../../js/amcharts.js" type="text/javascript"></script>
+	     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>        
+        <link type="text/css" rel="stylesheet" href="../../css/common.css"  /><link type="text/css" rel="stylesheet" href="../../css/buttons.css"  />';
+
+    $temp=$_REQUEST['level']+1;
+	$addr= "course-".$_REQUEST['course']."-".$temp.".php";
+    include_once("../".$addr);
+	echo "<script>$(':radio').attr('disabled', 'disabled');$(':submit').hide();$('.button:nth-child(1)').hide();</script>";
     $log = new logmein();
     $log->encrypt = true; //set encryption
     $count = 0;
     $check = new question();
     $check->dbconnect();
     $result = mysql_query("SELECT * FROM question WHERE course_id = '".$_REQUEST['course']."' AND  level_id = '".$_REQUEST['level']."';");
+	
     while ($ques=mysql_fetch_row($result)) {
         if ($_REQUEST[$ques[2]] == $ques[4])
         {
@@ -62,10 +74,12 @@ if (isset($_REQUEST['sub']))
             echo $ques[2].". The correct option is ".$ques[4]." <br />";
         }
     }
+    //Giving the link to next button!!
+    // echo 
     if ($log->logincheck($_SESSION['loggedin'],"student", "password", "username") == 1)
     {
         // window.location('')   
-        // echo $log->user["username"];
+        // echo $log->user["username"];xc`
         $result = mysql_query("SELECT * FROM progress WHERE username = '".$log->user['username']."'");      
         $course = "course".$_REQUEST['course'];
         // echo $course;
@@ -84,7 +98,7 @@ if (isset($_REQUEST['sub']))
     //echo $log->logincheck($_SESSION['loggedin'],"student", "password", "username");
     $addr= "course-".$_REQUEST['course']."-".$_REQUEST['level'].".php";
     // echo $count;
-    $str = "<a href='../".$addr."'><input type='button' value='Next' /></a>";
+    $str = "<center><a href='../".$addr."'><input class='button primary' type='button' value='Next' /></a></center>";
     echo $str;
 }
 ?>

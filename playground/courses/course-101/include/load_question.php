@@ -41,22 +41,28 @@ class question
         echo "<input type='hidden' name='level' value='".$level_id."' />";
         echo "<input type='hidden' name='course' value='".$course_id."' />";
         if (mysql_num_rows($result) > 0 )
-        echo "<input type='submit' name='sub' value='Submit' />";
+        echo "<input class='button primary' type='submit' name='sub' value='Submit' />";
         echo "</form> <br /> ";
     }
 }
 // echo "ifubiu";
 if (isset($_REQUEST['sub']))
 {
-    echo '<script src="../../js/amcharts.js" type="text/javascript"></script>        
+    echo '<script src="../../js/amcharts.js" type="text/javascript"></script>
+	     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>        
         <link type="text/css" rel="stylesheet" href="../../css/common.css"  /><link type="text/css" rel="stylesheet" href="../../css/buttons.css"  />';
-    include_once("../course-101-2.php");
+
+    $temp=$_REQUEST['level']+1;
+	$addr= "course-".$_REQUEST['course']."-".$temp.".php";
+    include_once("../".$addr);
+	echo "<script>$(':radio').attr('disabled', 'disabled');$(':submit').hide();$('.button:nth-child(1)').hide();</script>";
     $log = new logmein();
     $log->encrypt = true; //set encryption
     $count = 0;
     $check = new question();
     $check->dbconnect();
     $result = mysql_query("SELECT * FROM question WHERE course_id = '".$_REQUEST['course']."' AND  level_id = '".$_REQUEST['level']."';");
+	
     while ($ques=mysql_fetch_row($result)) {
         if ($_REQUEST[$ques[2]] == $ques[4])
         {
@@ -92,7 +98,7 @@ if (isset($_REQUEST['sub']))
     //echo $log->logincheck($_SESSION['loggedin'],"student", "password", "username");
     $addr= "course-".$_REQUEST['course']."-".$_REQUEST['level'].".php";
     // echo $count;
-    $str = "<a href='../".$addr."'><input type='button' value='Next' /></a>";
+    $str = "<center><a href='../".$addr."'><input class='button primary' type='button' value='Next' /></a></center>";
     echo $str;
 }
 ?>
