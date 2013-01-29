@@ -8,14 +8,14 @@ class logmein {
        //MAKE SURE TO FILL IN DATABASE INFO
     
 //---------------------Coomment this file while deploying ---------------------------//
-   var $hostname_logon = 'localhost';      //Database server LOCATION
-   var $database_logon = 'IEEP';       //Database NAME
-   var $username_logon = 'root';       //Database USERNAME
-   var $password_logon = 'root';       //Database PASSWORD
-    // var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
-    // var $database_logon = 'IEEP';       //Database NAME
-    // var $username_logon = 'IEEP';       //Database USERNAME
-    // var $password_logon = 'Random123!@#';       //Database PASSWORD
+   // var $hostname_logon = 'localhost';      //Database server LOCATION
+   // var $database_logon = 'IEEP';       //Database NAME
+   // var $username_logon = 'root';       //Database USERNAME
+   // var $password_logon = 'root';       //Database PASSWORD
+    var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
+    var $database_logon = 'IEEP';       //Database NAME
+    var $username_logon = 'IEEP';       //Database USERNAME
+    var $password_logon = 'Random123!@#';       //Database PASSWORD
 //---------------------Coomment this file while deploying -----------------------/
     //table fields
     var $email_column = 'email';

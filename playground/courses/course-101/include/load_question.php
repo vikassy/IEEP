@@ -6,10 +6,15 @@ class question
        //MAKE SURE TO FILL IN DATABASE INFO
     
 //---------------------Coomment this file while deploying ---------------------------//
-   var $hostname_logon = 'localhost';      //Database server LOCATION
-   var $database_logon = 'IEEP';       //Database NAME
-   var $username_logon = 'root';       //Database USERNAME
-   var $password_logon = 'root';       //Database PASSWORD
+   // var $hostname_logon = 'localhost';      //Database server LOCATION
+   // var $database_logon = 'IEEP';       //Database NAME
+   // var $username_logon = 'root';       //Database USERNAME
+   // var $password_logon = 'root';       //Database PASSWORD
+   var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
+    var $database_logon = 'IEEP';       //Database NAME
+    var $username_logon = 'IEEP';       //Database USERNAME
+    var $password_logon = 'Random123!@#';   
+
 
     function dbconnect(){
         $connections = mysql_connect($this->hostname_logon, $this->username_logon, $this->password_logon) or die ('Unabale to connect to the database');
@@ -43,6 +48,9 @@ class question
 // echo "ifubiu";
 if (isset($_REQUEST['sub']))
 {
+    echo '<script src="../../js/amcharts.js" type="text/javascript"></script>        
+        <link type="text/css" rel="stylesheet" href="../../css/common.css"  /><link type="text/css" rel="stylesheet" href="../../css/buttons.css"  />';
+    include_once("../course-101-2.php");
     $log = new logmein();
     $log->encrypt = true; //set encryption
     $count = 0;

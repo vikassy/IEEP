@@ -6,11 +6,14 @@ class question
        //MAKE SURE TO FILL IN DATABASE INFO
     
 //---------------------Coomment this file while deploying ---------------------------//
-   var $hostname_logon = 'localhost';      //Database server LOCATION
-   var $database_logon = 'IEEP';       //Database NAME
-   var $username_logon = 'root';       //Database USERNAME
-   var $password_logon = 'root';       //Database PASSWORD
-
+   // var $hostname_logon = 'localhost';      //Database server LOCATION
+   // var $database_logon = 'IEEP';       //Database NAME
+   // var $username_logon = 'root';       //Database USERNAME
+   // var $password_logon = 'root';       //Database PASSWORD
+    var $hostname_logon = 'IEEP.db.9351214.hostedresource.com';      //Database server LOCATION
+    var $database_logon = 'IEEP';       //Database NAME
+    var $username_logon = 'IEEP';       //Database USERNAME
+    var $password_logon = 'Random123!@#';   
     function dbconnect(){
         $connections = mysql_connect($this->hostname_logon, $this->username_logon, $this->password_logon) or die ('Unabale to connect to the database');
         mysql_select_db($this->database_logon) or die ('Unable to select database!');

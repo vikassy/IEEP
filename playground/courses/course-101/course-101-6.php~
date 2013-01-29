@@ -194,7 +194,7 @@
                 chart = new AmCharts.AmPieChart();
 
                 // title of the chart
-                chart.addTitle("% Forest Area to its Geographic area (Average - 33.43%)", 16);
+                chart.addTitle("% Forest Area to its Geographoc area (Average - 33.43%)", 16);
 
                 chart.dataProvider = chartData;
                 chart.titleField = "state";

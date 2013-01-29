@@ -60,6 +60,7 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
     </script>
   </head>
   <body style="font-family: Arial;border: 0 none; ">
+    <h2>Forest cover in 2010 ( x1000 hectares)</h2>
     <div id="visualization" style="height: 800px; width: 800px;margin:auto;"></div><br />
 <br />
 

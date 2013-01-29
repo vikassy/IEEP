@@ -549,7 +549,7 @@
                 
                 // SERIAL CHART    
                 chart = new AmCharts.AmSerialChart();
-				chart.addTitle('Average Temperature Anomaly',16);
+				chart.addTitle('Average Temperature Anomoly',16);
                 chart.pathToImages = "https://sites.google.com/site/tushardobhal/data-viz/";
                 chart.zoomOutButton = {
                     backgroundColor: '#000000',
